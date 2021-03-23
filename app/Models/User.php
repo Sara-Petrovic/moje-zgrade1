@@ -40,4 +40,8 @@ class User extends Authenticatable
     protected $casts = [
         'email_verified_at' => 'datetime',
     ];
+
+    public function zgrade(){
+        return $this->hasMany(Zgrada::class);
+    }
 }
